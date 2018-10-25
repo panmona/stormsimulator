@@ -3,7 +3,7 @@ Simulate a thunderstorm with the exact right amount of thunder/lightning. Thanks
 
 ![Overview of Website](https://user-images.githubusercontent.com/16801528/47524755-ca474900-d89b-11e8-8395-490501621364.jpg)
 
-Try it yourself [here](https://stormsimulator.com).
+Try it out yourself [here](https://stormsimulator.com).
 
 ## Description of parameters
 There are different parameters that will control your experience:
@@ -43,6 +43,8 @@ Controls if rain/thunder sounds should play or not.
 
 - Different Parameters are controllable by the user
 - Current configuration is saved to make it possible to have the same configuration across sessions (localStorage)
+- Responsiveness ([even for very small screens](https://user-images.githubusercontent.com/16801528/47529436-15ffef80-d8a8-11e8-8429-9677825539ca.jpg))
+
 
 ## Browser Support
 [All browsers that support the Web Audio API, which are all modern browsers.](https://caniuse.com/#search=web%20audio)
