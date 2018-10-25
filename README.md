@@ -3,7 +3,8 @@ Simulate a thunderstorm with the exact right amount of thunder/lightning. Thanks
 
 ![Overview of Website](https://user-images.githubusercontent.com/16801528/47524755-ca474900-d89b-11e8-8395-490501621364.jpg)
 
-Try it out yourself [here](https://stormsimulator.com).
+## Where can I try it out myself?
+Click [here](https://stormsimulator.com) to try it out.
 
 ## Description of parameters
 There are different parameters that will control your experience:
