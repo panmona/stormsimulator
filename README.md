@@ -45,7 +45,8 @@ Controls if rain/thunder sounds should play or not.
 - Current configuration is saved to make it possible to have the same configuration across sessions (localStorage)
 
 ## Browser Support
-All browsers that support the Web Audio API, which are all modern browsers.
+[All browsers that support the Web Audio API, which are all modern browsers.](https://caniuse.com/#search=web%20audio)
+For other features like the `fetch` function I included a [polyfill](https://en.m.wikipedia.org/wiki/Polyfill_(programming)).
 
 There are some performance problems with the Mobile Safari browser.
 
