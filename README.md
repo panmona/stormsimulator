@@ -76,5 +76,7 @@ Yes. Feel free to use them for what ever you want as I made them myself. [Some o
 ## Contribute
 Any type of feedback, pull request or issue is welcome.
 
+Be advised when poking around in the code that this was one of my first bigger JavaScript applications I made. So not everything is as organised as it should be. Feel free to submit PRs to improve this!
+
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
