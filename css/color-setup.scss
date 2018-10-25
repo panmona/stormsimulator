@@ -1,0 +1,48 @@
+@import './variables.scss';
+
+body {
+    background-color: $wet-asphalt;
+}
+
+footer {
+    background-color: $wet-asphalt;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a,
+label,
+span {
+    color: $clouds !important;
+}
+
+p > a {
+    color: $emerald !important;
+    text-decoration: underline;
+}
+
+/* Button Hover color */
+.btn:hover {
+    background-color: $green-sea;
+}
+
+.active {
+    background-color: $turquoise;
+    &:hover {
+        background-color: $green-sea !important;
+    }
+}
+
+.white {
+    background-color: $clouds;
+}
+
+.primary {
+    color: $turquoise !important;
+}

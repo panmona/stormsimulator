@@ -1,0 +1,110 @@
+@import './variables.scss';
+
+// Setup of sticky footer (not a fixed one!!)
+$height-footer: 100px;
+html {
+    min-height: 100%;
+    position: relative;
+    body {
+        margin-bottom: $height-footer;
+    }
+    #footer {
+        @media (min-width: $sm-screen-min) {
+            bottom: 0;
+        }
+        position: absolute;
+        width: 100%;
+    }
+}
+
+// Normalize Label size and font to the p tags
+label {
+    font-size: 18px;
+    line-height: 1.72222;
+    padding-left: $xxxs;
+}
+
+// Bootstrap Override Width specify
+.img-responsive {
+    width: 70% !important;
+    margin: auto;
+}
+
+.img-sm {
+    width: 30% !important;
+}
+
+/* Main Simulator Layout */
+.simulator-parent {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0;
+}
+
+.background-img {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+/* End of Simulator Layout */
+
+// Thumbnail
+.img-thumbnail {
+    width: 18%;
+    height: 18%;
+    border-radius: 0;
+    border: none;
+    &:hover {
+        background-color: $turquoise;
+    }
+}
+
+.distribute-items-evenly {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+}
+
+.break-word {
+    word-wrap: break-word;
+}
+
+// Optimize Nav Text For iPhone 5 / 320px devices
+@media (max-width: $iphone5-max-width) and (max-height: $iphone5-max-height) {
+    .smaller-font-320px {
+        font-size: 21px;
+        padding-top: 16px;
+    }
+}
+
+/* Medium Screen push down item to middle */
+@media (min-width: $md-screen-min) and (max-width: $md-screen-max) {
+    .col-md-push-down-xxxl {
+        padding-top: $xxxl;
+    }
+}
+
+// Setup for "Menu" hint on mobile
+.navbar-toggle .button-label {
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+    padding-right: 20px;
+}
+.button-bars {
+    display: inline-block;
+    float: left;
+}

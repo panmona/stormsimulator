@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Thunderstorm Sounds</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Thunderstorm Sounds is a new kind of website offering the possibility to simulate a thunderstorm with the exact right amount of thunder/lightning. Thanks to the relaxing sound of heavy rain paired with thunder it will help you to relax, study, meditate and sleep.">
+    <meta name="google" content="nositelinkssearchbox" />
+
+    <!-- Loading Bootstrap -->
+    <link href="css/flat-ui/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui/flat-ui.min.css" rel="stylesheet">
+    <!-- Loading Icomoon -->
+     <link href="css/icomoon/icomoon.min.css" rel="stylesheet">
+    <!-- Loading My Own Custom CSS -->
+    <link href="css/min/combined.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png?v=lkdOBvlpjd">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png?v=lkdOBvlpjd">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png?v=lkdOBvlpjd">
+    <link rel="manifest" href="/icons/manifest.json?v=lkdOBvlpjd">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg?v=lkdOBvlpjd" color="#2b5797">
+    <link rel="shortcut icon" href="./icons/favicon.ico?v=lkdOBvlpjd">
+    <meta name="msapplication-config" content="/icons/browserconfig.xml?v=lkdOBvlpjd">
+    <meta name="apple-mobile-web-app-title" content="Stormsimulator">
+    <meta name="application-name" content="Stormsimulator">
+    <meta name="theme-color" content="#34495e">
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+                <div class="navbar-header">
+                    <button id="menuicon" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="button-label">Menu</span>
+                        <div class="button-bars">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </div>
+                    </button> <!-- /#menuicon -->
+                    <a class="navbar-brand no-display-on-small no-rg-pad-xs smaller-font-320px" href="#">Thunderstorm Sounds</a>
+                </div> <!-- /.navbar-header -->
+                <div class="collapse navbar-collapse" id="navbar-collapse-01">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li>
+                            <a href="https://twitter.com/intent/tweet?source=&text=Relax%20to%20your%20favourite%20kind%20of%20thunderstorm%20at%20https://stormsimulator.com"
+                                target="_blank" rel="noopener noreferrer">Share on Twitter</a>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </nav><!-- /navbar -->
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+            <section id="main-settings" class="col-xs-12 col-md-6 col-lg-5 mar-bt-sm">
+                <h1 class="text-center mar-bt-xl mar-tp-xs mar-rg-sm break-word reset-size-xxs">
+                    <span class="font-md-until-xs">Simulate</span>
+                    <span class="font-sm-until-xs">Thunderstorms</span>
+                </h1>
+                <div id="audiosettings" class="mar-bt-lg">
+                    <div class="row">
+                        <div class="col-xs-6 col-xxs-12 text-center mar-bt-sm">
+                            <button id="volumeButton" type="button" class="btn btn-primary
+                            btn-circle btn-xl mar-rg-sm" aria-label="volume">
+                                <i id="volumeButtonIcon" class="big-icon icon-volume-high"></i>
+                            </button>
+                        </div>
+                        <div class="col-xs-6 col-xxs-12 text-center mar-bt-sm">
+                            <button id="pauseButton" type="button" class="btn btn-primary
+                            btn-circle btn-xl" aria-label="play">
+                                <i id="pauseButtonIcon" class="big-icon icon-play"></i>
+                                <span id="pauseButtonLoading" /></span>
+                            </button>
+                        </div>
+                    </div>
+                </div> <!-- /#audiosettings -->
+
+                <div id="storm-settings">
+                    <div id="rain-type">
+                        <fieldset>
+                            <label class="font-xxs-on-xxs" id="rain-label">Amount of rain</label>
+                            <div id="rain-slider" aria-labelledby="rain-label"></div>
+                        </fieldset>
+                    </div>
+                    <div id="lightning-amount">
+                        <fieldset>
+                            <label class="font-xxs-on-xxs" id="lightning-label">Amount of lightning</label>
+                            <div id="lightning-slider" aria-labelledby="lightning-label"></div>
+                        </fieldset>
+                    </div>
+                    <div id="thunderstorm-distance">
+                        <div class="row">
+                            <div class="col-xs-8 col-xxs-12">
+                                <label class="font-xxs-on-xxs" id="thunderDistance-label">Distance to thunderstorm</label>
+                            </div>
+                            <div class="col-xs-4 text-right col-xxs-12">
+                                <p aria-label="selected value of thunder distance" class="no-bt-mar font-xxs-on-xxs inline-block-xxs">
+                                    <span id="thunderDistance-number">3</span> km</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div id="thunderDistance-slider" aria-labelledby="thunderDistance-label"></div>
+                        </div>
+                    </div> <!-- /#thunderstorm-distance -->
+                </div> <!-- /#storm-settings -->
+            </section> <!-- /#main-settings -->
+
+            <div id="right-content" class="col-xs-12 col-md-6 col-lg-7 col-md-push-down-xxxl col-lg-push-down-lg">
+                <div id="setting-chooser" class="mar-bt-xs distribute-items-evenly">
+                    <img id="thumbnail1" src="img/tree-on-hill.jpg" class="img-thumbnail active pad-xxs pad-xxxs-webpanel changePicture"
+                    alt="Tree seen in distance in mountain landscape." tabindex="0" />
+                    <img id="thumbnail2" src="img/building-autumn-lake.jpg" class="img-thumbnail pad-xxs pad-xxxs-webpanel changePicture"
+                    alt="Building with autumn forest in the background. Reflection in lake." tabindex="0" />
+                    <img id="thumbnail3" src="img/rain-clouds-in-coast-landscape.jpg" class="img-thumbnail pad-xxs pad-xxxs-webpanel changePicture"
+                    alt="Near black rain clouds in a coast landscape." tabindex="0" />
+                    <img id="thumbnail4" src="img/branch-and-cyan-lake.jpg" class="img-thumbnail pad-xxs pad-xxxs-webpanel changePicture"
+                    alt="Branch of a tree with a forest and a cyan mountain lake in the background." tabindex="0" />
+                    <img id="thumbnail5" src="img/tree-in-sea-of-clouds.jpg" class="img-thumbnail pad-xxs pad-xxxs-webpanel changePicture"
+                    alt="Tree in the middle of a sea of clouds." tabindex="0" />
+                </div>
+
+                <div id="result" class="simulator-parent mar-bt-xl">
+                    <img src="img/tree-on-hill.jpg" class="background-img pad-sm pad-xs-webpanel white"
+                    alt="ree seen in distance in mountain landscape." id="result-image" />
+                    <img src="img/animated-rain.gif" class="overlay-img pad-sm pad-xs-webpanel white"
+                    alt="Animation of rain overlay." id="rain-animation" />
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
+    <footer id="footer">
+        <div class="container">
+            <p class="footer-block text-center small">
+                If you have any problems: Double check if you don't block Autoplay.
+                <br>
+                Thunder Sounds from <a href="http://99sounds.org/rain-and-thunder/" target="_blank" rel="noopener noreferrer">99sounds.org</a> · <a href="https://www.iconfinder.com/icons/2189569/protection_rain_summer_sun_umbrella_icon#size=512" target="_blank" rel="noopener noreferrer">Icon</a> by Vignesh P. / <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a>
+                <br>
+                <a href="mailto:thundersounds@vivaldi.net?subject=Feedback on Stormsimulator Website">Contact Me</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
+    <script src="js/flat-ui/vendor/jquery.min.js"></script>
+    <script src="./js/flat-ui/vendor/forEachPolyfill.min.js"></script>
+    <script src="./js/flat-ui/vendor/fetchPolyfill.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/flat-ui/flat-ui.min.js"></script>
+    <script src="js/flat-ui/slider.min.js"></script>
+    <!-- Custom Javascript *CONCATENATION PARTY* -->
+    <script src="./js/min/config.min.js"></script>
+    <script src="./js/min/storageManager.min.js"></script>
+    <script src="./js/min/pageElements.min.js"></script>
+    <script src="./js/min/utility.min.js"></script>
+    <script src="./js/min/domUtility.min.js"></script>
+    <script src="./js/min/initslider.min.js"></script>
+    <script src="./js/min/thunder.min.js"></script>
+    <script src="./js/min/lightning.min.js"></script>
+    <script src="./js/min/userSettings.min.js"></script>
+    <script src="./js/min/rainSound.min.js"></script>
+    <!-- And the magic starts here: -->
+    <script src="./js/min/init.min.js"></script>
+
+  </body>
+</html>

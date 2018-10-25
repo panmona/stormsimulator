@@ -1,0 +1,205 @@
+@import './variables.scss';
+
+// Remove Paddings
+.no-rg-pad {
+    padding-right: 0;
+}
+
+.no-lf-pad {
+    padding-left: 0;
+}
+
+.no-hor-pad {
+    @extend .no-rg-pad;
+    @extend .no-lf-pad;
+}
+
+@media (max-width: $xs-screen-max) {
+    .no-rg-pad-xs {
+        padding-right: 0;
+    }
+
+    .no-lf-pad-xs {
+        padding-left: 0;
+    }
+}
+
+// Add Paddings left
+.pad-lf-xxxs {
+    padding-left: $xxxs;
+}
+
+.pad-lf-xxs {
+    padding-left: $xxs;
+}
+
+.pad-lf-xs {
+    padding-left: $xs;
+}
+
+.pad-lf-sm {
+    padding-left: $sm;
+}
+
+.pad-lf-md {
+    padding-left: $md;
+}
+
+.pad-lf-lg {
+    padding-left: $lg;
+}
+
+.pad-lf-xl {
+    padding-left: $xl;
+}
+
+// Add paddings right
+.pad-rg-xs {
+    padding-right: $xs;
+}
+
+.pad-rg-sm {
+    padding-right: $sm;
+}
+
+.pad-rg-md {
+    padding-right: $md;
+}
+
+.pad-rg-lg {
+    padding-right: $lg;
+}
+
+.pad-rg-xl {
+    padding-right: $xl;
+}
+
+// Add paddings bot
+// Add paddings right
+.pad-bt-xs {
+    padding-bottom: $xs;
+}
+
+.pad-bt-sm {
+    padding-bottom: $sm;
+}
+
+.pad-bt-md {
+    padding-bottom: $md;
+}
+
+.pad-bt-lg {
+    padding-bottom: $lg;
+}
+
+.pad-bt-xl {
+    padding-bottom: $xl;
+}
+
+// Overall Pad
+.pad-xxs {
+    padding: $xxs;
+}
+
+.pad-xs {
+    padding: $xs;
+}
+
+.pad-sm {
+    padding: $sm;
+}
+
+.pad-md {
+    padding: $md;
+}
+
+// Add Right Margins
+.mar-rg-xs {
+    margin-right: $xs;
+}
+
+.mar-rg-sm {
+    margin-right: $sm;
+}
+
+.mar-rg-md {
+    margin-right: $md;
+}
+
+.mar-rg-lg {
+    margin-right: $lg;
+}
+
+.mar-rg-xl {
+    margin-right: $xl;
+}
+
+// Add Bottom Margins
+.mar-bt-xs {
+    margin-bottom: $xs;
+}
+
+.mar-bt-sm {
+    margin-bottom: $sm;
+}
+
+.mar-bt-md {
+    margin-bottom: $md;
+}
+
+.mar-bt-lg {
+    margin-bottom: $lg;
+}
+
+.mar-bt-xl {
+    margin-bottom: $xl;
+}
+
+// Add top margins
+.mar-tp-xs {
+    margin-top: $xs;
+}
+
+.mar-tp-sm {
+    margin-top: $sm;
+}
+
+.mar-tp-md {
+    margin-top: $md;
+}
+
+.mar-tp-lg {
+    margin-top: $lg;
+}
+
+.mar-tp-xl {
+    margin-top: $xl;
+}
+
+
+// Remove Margins
+.no-tp-mar {
+    margin-top: 0;
+}
+
+.no-bt-mar {
+    margin-bottom: 0;
+}
+
+.no-lf-mar {
+    margin-left: 0;
+}
+
+.no-rg-mar {
+    margin-top: 0;
+}
+
+.no-hor-mar {
+    @extend .no-lf-mar;
+    @extend .no-rg-mar;
+}
+
+.no-ver-mar {
+    @extend .no-tp-mar;
+    @extend .no-bt-mar;
+}

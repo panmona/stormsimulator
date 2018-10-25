@@ -1,0 +1,73 @@
+@import './variables.scss';
+
+@media (max-width: 285px) {
+    .col-xxs-12 {
+        width: 100%;
+    }
+}
+
+@media (min-width: 264px) and (max-width: 460px) {
+    .font-sm-until-xs {
+        font-size: 30px;
+    }
+    .font-md-until-xs {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 264px) {
+    .font-sm-until-xs {
+        font-size: 21px;
+    }
+    .font-md-until-xs {
+        font-size: 37px;
+    }
+}
+
+@media (max-width: 201px) {
+    .font-xxs-on-xxs {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 303px) and (min-width: 202px) {
+    .font-xxs-on-xxs {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 460px) and (min-width: 304px) {
+    .font-xxs-on-xxs {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 460px) {
+    .inline-block-xxs {
+        display: inline-block;
+    }
+    .reset-size-xxs {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 230px) {
+    .pad-xs-webpanel {
+        padding: $xs;
+    }
+}
+
+@media (max-width: 443px) {
+    .no-display-on-small {
+        display: none;
+    }
+    .navbar {
+        margin-bottom: 0px !important;
+    }
+}
+
+@media (max-width: 282px) {
+    .pad-xxxs-webpanel {
+        padding: $xxxs;
+    }
+}

@@ -1,0 +1,30 @@
+@import './variables.scss';
+
+.big-icon {
+    font-size: 90px;
+    @media (max-width: $iphone5-max-width) and (max-height: $iphone5-max-height) {
+        font-size: 65px;
+    }
+    @media (max-width: 362px) {
+        font-size: 75px;
+    }
+}
+
+.btn-xl {
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    vertical-align: middle;
+    @media (max-width: $iphone5-max-width) and (max-height: $iphone5-max-height) {
+        width: 100px;
+        height: 100px;
+    }
+    @media (max-width: 362px) {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.btn-circle {
+    border-radius: 50%;
+}
