@@ -1,4 +1,7 @@
 # Stormsimulator.com
+
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/maracuja-juice/stormsimulator/issues)
+
 Simulate a thunderstorm with the exact right amount of thunder/lightning. Thanks to the relaxing sound of heavy rain paired with thunder it helps you to relax, study, meditate and sleep.
 
 ![Overview of Website](https://user-images.githubusercontent.com/16801528/47524755-ca474900-d89b-11e8-8395-490501621364.jpg)
