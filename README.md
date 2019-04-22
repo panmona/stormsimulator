@@ -57,7 +57,7 @@ For other features like the `fetch` function I included a [polyfill](https://en.
 There are some performance problems with the Mobile Safari browser.
 
 ## Run it locally
-To run it locall you need to open the `index.html` page.
+To run it locally you need to open the `index.html` page.
 
 So that the sounds also play you need to supply the sound files yourself because I only got the permission from the sound creators to use the sound files on my website but not for uploading them onto GitHub.
 
@@ -83,7 +83,7 @@ Yes. Feel free to use them for what ever you want as I made them myself. [Some o
 ## Contribute
 Any type of feedback, pull request or issue is welcome.
 
-Be advised when poking around in the code that this was one of my first bigger JavaScript applications I made. So not everything is as organised as it should be. Feel free to submit PRs to improve this!
+Be advised when poking around in the code that this was one of my first bigger JavaScript applications I made. So not everything is as organised as it should be. (Moving this over to a React Application is planned when I get around to doing it) Feel free to submit PRs to improve this!
 
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
