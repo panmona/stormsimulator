@@ -1,13 +1,8 @@
 # Stormsimulator.com
 
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/maracuja-juice/stormsimulator/issues)
-
 Simulate a thunderstorm with the exact right amount of thunder/lightning. Thanks to the relaxing sound of heavy rain paired with thunder it helps you to relax, study, meditate and sleep.
 
 ![Overview of Website](https://user-images.githubusercontent.com/16801528/47524755-ca474900-d89b-11e8-8395-490501621364.jpg)
-
-## Where can I try it out myself?
-Click [here](https://stormsimulator.com) to try it out.
 
 ## Description of parameters
 There are different parameters that will control your experience:
@@ -78,12 +73,7 @@ root
 ```
 
 ## Can I use the images?
-Yes. Feel free to use them for what ever you want as I made them myself. [Some of them are also on Unsplash](https://images.unsplash.com/photo-1510426392066-77bde1359ef1?ixlib=rb-0.3.5&s=e61846ded235d15361a7f9fa9bda5cd7&auto=format&fit=crop&w=1500&q=80)
-
-## Contribute
-Any type of feedback, pull request or issue is welcome.
-
-Be advised when poking around in the code that this was one of my first bigger JavaScript applications I made. So not everything is as organised as it should be. (Moving this over to a React Application is planned when I get around to doing it) Feel free to submit PRs to improve this!
+Yes. Feel free to use them for what ever you want as I made them myself. [Some of them are also on Unsplash](https://unsplash.com/@marimba)
 
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
