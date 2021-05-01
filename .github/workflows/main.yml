@@ -1,38 +1,56 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
 
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master, test ]
+    branches: [ master, next ]
   pull_request:
     branches: [ master ]
-
-  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    
     steps:
       - uses: actions/checkout@v2
       
-      - name: Clone repo
-        run: git clone https://${AUDIO_KEY}:x-oauth-basic@github.com/${AUDIO_URL}
+      - name: Clone audio file repo
+        run: git clone https://${AUDIO_KEY}:x-oauth-basic@github.com/panmau/stormsimulator-files.git
+        env: 
+          AUDIO_KEY: ${{ secrets.AUDIO_KEY }}
+          AUDIO_URL: ${{ secrets.AUDIO_URL }}
 
-      - name: Clone repo
+      - name: Prepare Distribution Folder
         run: |
-          mkdir dist
-          cp * dist
-          rmdir -r dist/.github
+          tree
+          mv ${REPO_NAME}/audio audio
+          rm -r ${REPO_NAME}
+          rsync -a * dist/
+        env:
+          REPO_NAME: ${{ secrets.AUDIO_REPO }}
 
-      - name: Deploy to Netlify
-        id: deploy-netlify
+      - name: Deploy Preview
+        if: github.event_name == 'pull_request'
         uses: netlify/actions/cli@master
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         with:
-          args: deploy --dir=dist
+          args: deploy --dir=dist -m '${{ github.head_ref }}'
+
+      - name: Deploy Release @next
+        if: github.ref == 'refs/heads/next'
+        uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        with:
+          args: deploy --dir=dist -b next
+
+      - name: Deploy Release
+        if: github.ref == 'refs/heads/master'
+        uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        with:
+          args: deploy --dir=dist --prod
