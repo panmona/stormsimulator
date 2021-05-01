@@ -15,14 +15,7 @@ let rainSoundPlayer = (function() {
     let gainNode, shouldStart, audioData, srcNode;
     let audioContext;
 
-    let src;
-    // Detection of file:// -> use Dropbox so that Rain works.
-    if(location.hostname === "") {
-        src = 'https://www.dl.dropboxusercontent.com/s/ljt9ewq0jn1t9ze/rain.wav?dl=0'
-    } else {
-        src = `https://${location.hostname}/audio/rainloop/rain.wav`;
-    }
-
+    let src = `https://${location.hostname}/audio/rainloop/rain.wav`;
     let globalVolume = 1;
     let volumeModifier = 1;
     function calculateVolume() {
