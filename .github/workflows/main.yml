@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ master, next ]
+    branches: [ main, next ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -47,7 +47,7 @@ jobs:
           args: deploy --dir=dist -b next
 
       - name: Deploy Release
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         uses: netlify/actions/cli@master
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
