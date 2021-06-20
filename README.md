@@ -1,4 +1,4 @@
-# Stormsimulator.com
+# Stormsimulator
 
 Simulate a thunderstorm with the exact right amount of thunder/lightning. Thanks to the relaxing sound of heavy rain paired with thunder it helps you to relax, study, meditate and sleep.
 
